@@ -7,9 +7,9 @@ from langchain.vectorstores import  Pinecone
 import pinecone
 #from const import INDEX_NAME
 INDEX_NAME="langchain-doc-index"
-os.environ['OPENAI_API_KEY']='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'
+
 pinecone.init(
-    api_key='74d485a7-91b9-4261-8acf-c390287907ec',#os.environ["PINECONE_API_KEY"],
+    api_key=,#os.environ["PINECONE_API_KEY"],
     environment='gcp-starter',#os.environ["PINECONE_ENVIRONMENT_REGION"],
 )
 
