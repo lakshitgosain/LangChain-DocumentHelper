@@ -4,7 +4,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 import pinecone
-os.environ["PINECONE_API_KEY"]='74d485a7-91b9-4261-8acf-c390287907ec'
+
 
 pinecone.init(api_key=,environment=os.environ["PINECONE_ENVIRONMENT_REGION"])
 
