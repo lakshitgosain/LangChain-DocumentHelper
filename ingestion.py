@@ -4,6 +4,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 import pinecone
+os.environ["PINECONE_API_KEY"]='74d485a7-91b9-4261-8acf-c390287907ec'
 
 pinecone.init(api_key=os.environ["PINECONE_API_KEY"],environment=os.environ["PINECONE_ENVIRONMENT_REGION"])
 
@@ -27,7 +28,7 @@ def ingest_docs() -> None:
 
     print(f"Going to insert{len(documents)} in Pinecone")
     embeddings=OpenAIEmbeddings()
-    Pinecone.from_documents(documents, embeddings, index_name="langchain-doc-index")
+    Pinecone.from_documents(documents[3990:], embeddings, index_name="langchain-doc-index")
     print("Added to Pinecone")
 
 if __name__ == '__main__':
